@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Make your task list here just easy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style-1.css">
+    <title>TODO List (prototype)</title>
+</head>
+<body class="lightMode darkMode">
+
+    <main>
+        <h1>TODO List Maker</h1>
+        <h5>Not Smart(-est)</h5>
+
+        <ol id="Todo-List" class="taskBox">
+            <p id="message" class="empty"> </p>
+
+        </ol>
+
+        <textarea 
+        class="todoInput" 
+        placeholder="Type New Task Here" 
+        cols="43" 
+        rows="2"></textarea> <br />
+        <input type="checkbox" name="importanCB" id="impotant-task">
+        <label for="importanCB" class="importantLabel">important</label>
+        <div class="buttonBox">
+            <input
+             type="button"
+             value="add Task"
+             class="buttons addTaskBtn NMBtn"
+             onmouseover="toDark(0)"
+             onmouseout="toNormal(0)"
+             onmousedown="toNearDark(0)"
+             onmouseup="removeND(0)"
+            >
+            <input
+             type="button"
+             value="Clear Done Task"
+             class="buttons NMBtn clearDT"
+             onmouseover="toDark(1)"
+             onmouseout="toNormal(1)"
+             onmousedown="toNearDark(1)"
+             onmouseup="removeND(1)"
+            >
+            <input
+             type="button"
+             value="Remove All Task"
+             class="buttons NMBtn clearAllbtn"
+             onmouseover="toDark(2)"
+             onmouseout="toNormal(2)"
+             onmousedown="toNearDark(2)"
+             onmouseup="removeND(2)"
+            >
+        </div>
+    </main>
+
+    <input type="button" value="Dark-Mode" class="darkModeButton">
+
+    <script src="script.js"></script>
+</body>
+</html>
